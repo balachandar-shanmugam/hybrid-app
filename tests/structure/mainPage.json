@@ -1,0 +1,26 @@
+{
+  "title": "Main Page",
+  "url": "",
+  "components": {
+    "Button": {
+      "playgroundButton": "[data-qa-id=\"MainPage-sdk-hero-button\"]"
+    },
+    "Link": {
+      "aboutUs": "[href=\"/about-us\"]",
+      "home": "[href=\"/\"]",
+      "noJsChrome": "[href=\"//www.google.com/search?q=how+to+enable+javascript+for+chrome\"]",
+      "noJsEdge": "[href=\"//www.google.com/search?q=how+to+enable+javascript+for+edge\"]",
+      "noJsSafari": "[href=\"//www.google.com/search?q=how+to+enable+javascript+for+safari\"]",
+      "noJsFirefox": "[href=\"//www.google.com/search?q=how+to+enable+javascript+for+firefox\"]",
+      "noJsOpera": "[href=\"//www.google.com/search?q=how+to+enable+javascript+for+opera\"]"
+    },
+    "Hero": {
+      "sdkContainer": "[data-qa-id=\"MainPage-sdk-hero-container\"]",
+      "constellationContainer": "[data-qa-id=\"MainPage-constellation-hero-container\"]",
+      "footerContainer": "[data-qa-id=\"footer-container\"]"
+    },
+    "Heading": {
+      "noJsHeading": ".text-warning"
+    }
+  }
+}

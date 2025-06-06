@@ -1,0 +1,9 @@
+{
+  "title": "Problem Page",
+  "url": "",
+  "components": {
+    "Heading": {
+      "problem": ".csl-heading-s4"
+    }
+  }
+}

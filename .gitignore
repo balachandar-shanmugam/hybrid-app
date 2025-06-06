@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules
+
+#Dist folders
+**/dist/
+
+# Cache files
+.eslintcache
+
+# Environment variables used by the application
+# Exampels of values can be found in .env.example
+.env
+
+# DS_Store
+.DS_Store
+
+# SonarQube Scanner working dir
+**/.scannerwork/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+npm-error.log*
+lerna-debug.log*
+
+# Hide editor configs
+.vscode/*
+!.vscode/settings.json
+
+#Examples for brands
+noScript
+

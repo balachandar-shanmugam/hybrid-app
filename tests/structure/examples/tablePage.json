@@ -1,0 +1,9 @@
+{
+  "title": "Table Page",
+  "url": "/iframe.html?args=&id=components-content-table--default&viewMode=story",
+  "components": {
+    "Table": {
+      "table": ".csl-table"
+    }
+  }
+}

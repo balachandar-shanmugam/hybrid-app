@@ -1,0 +1,9 @@
+{
+  "title": "NumberField Page",
+  "url": "/iframe.html?id=components-forms-numberfield--default&viewMode=story",
+  "components": {
+    "NumberField": {
+      "numberfield": ".csl-field"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Accordion Page",
+  "url": "/iframe.html?id=components-content-accordion--default&viewMode=story",
+  "components": {
+    "Accordion": {
+      "testAcc": ".csl-container"
+    }
+  }
+}

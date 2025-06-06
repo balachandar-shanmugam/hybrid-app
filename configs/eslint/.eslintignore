@@ -1,0 +1,12 @@
+node_modules
+dist
+tests
+.vscode
+allure-report 
+reports
+__generated__
+lib-cov
+coverage
+.DS_Store
+.idea
+**/*.js

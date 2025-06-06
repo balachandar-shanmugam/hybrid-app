@@ -1,0 +1,9 @@
+{
+  "title": "List Page",
+  "url": "/iframe.html?args=&id=components-content-list--default&viewMode=story",
+  "components": {
+    "List": {
+      "testList": ".csl-list"
+    }
+  }
+}

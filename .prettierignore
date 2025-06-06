@@ -1,0 +1,12 @@
+# Ignore artifacts:
+dist
+coverage
+README.md
+CHANGELOG.md
+allure-report 
+reports
+__generated__
+# Ignore Helm Charts
+helm-chart
+helm-overrides
+prod

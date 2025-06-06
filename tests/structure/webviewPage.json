@@ -1,0 +1,15 @@
+{
+  "title": "Webview Page",
+  "url": "web-view",
+  "components": {
+    "Heading": {
+      "webViewDemo": ".csl-heading-s4",
+      "webViewHeader": "header",
+      "webViewFooter": "footer"
+    },
+    "Button": {
+      "isIosButton": "[data-testid=\"isIos-button-test-id\"]",
+      "isAndroidButton": "[data-testid=\"isAndroid-button-test-id\"]"
+    }
+  }
+}

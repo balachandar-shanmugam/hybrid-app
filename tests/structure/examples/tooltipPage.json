@@ -1,0 +1,9 @@
+{
+  "title": "Tooltip Page",
+  "url": "/iframe.html?args=&id=components-notifications-tooltip--default&viewMode=story",
+  "components": {
+    "Tooltip": {
+      "tooltip": "#storybook-root"
+    }
+  }
+}

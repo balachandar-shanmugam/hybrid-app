@@ -1,0 +1,9 @@
+{
+  "title": "Error Summary Page",
+  "url": "/iframe.html?args=&id=components-notifications-errorsummary--default&viewMode=story",
+  "components": {
+    "ErrorSummary": {
+      "errorSummary": ".csl-error-summary"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "About Page",
+  "url": "about-us",
+  "components": {
+    "Heading": {
+      "ourMission": ".csl-heading-s4"
+    },
+    "Checkbox": {
+      "checkbox": ".csl-checkbox__label",
+      "checkboxError": ".csl-checkbox"
+    },
+    "Link": {
+      "aboutUs": "[href=\"/about-us\"]",
+      "home": "[href=\"/\"]"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Icon Page",
+  "url": "/iframe.html?args=&id=components-content-icon--default&viewMode=story",
+  "components": {
+    "Icon": {
+      "icon": ".csl-icon"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Link Page",
+  "url": "/iframe.html?args=&id=components-actions-link--as-router-link&viewMode=story",
+  "components": {
+    "Link": {
+      "link": ".csl-link"
+    }
+  }
+}

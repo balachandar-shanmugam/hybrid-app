@@ -1,0 +1,38 @@
+{
+  "extends": "@interstellar/typescript-config-react/dist/tsconfig.json",
+  "ts-node": {
+    "files": true
+  },
+  "files": ["tests/globals.d.ts"],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "types": ["jest", "node"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "../node_modules/@types",
+      "./node_modules/@interstellar/react-app/@types",
+      "./node_modules/@interstellar/react-app/node_modules/@types",
+      "./node_modules/@interstellar/react-app/node_modules/**/*.d.ts",
+      "./**/*.d.ts"
+    ],
+    "paths": {
+      "routes": ["src/routes"],
+      "routes/*": ["src/routes/*"],
+      "assets/*": ["src/assets/*"],
+      "utils/*": ["src/__tests__/utils"],
+      "components": ["src/components"],
+      "components/*": ["src/components/*"],
+      "content": ["src/content"],
+      "content/*": ["src/content/*"],
+      "dataModel": ["src/examples/dataModel"],
+      "dataModel/*": ["src/examples/dataModel/*"]
+    }
+  },
+  "include": ["src", ".", "configs/eslint/.eslintrc.js"],
+  "exclude": ["tests/**/*.ts"],
+  "lib": ["dom", "es6"]
+}

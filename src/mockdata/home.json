@@ -1,0 +1,17 @@
+{
+  "home": {
+    "tokens": [
+        { "id": "1", "token": "seldhi1234jduewodjf3l4jd8s42kf", "type": 100 },
+        { "id": "2", "token": "kjdfir8t4ni3fnr7nf39flr9eh4fhw", "type": 200 }
+    ],
+    "wallets": [
+        { "id": "1", "text": "Hedera wallet", "postId": "1" },
+        { "id": "2", "text": "canton wallet", "postId": "1" }
+    ],
+    "content": {
+        "title": "Digital Finance - Self Custody, Tokenization and Wallet services for Money market",
+        "subtitle" : "Customer request for tokens for the successful digital money transactions via tax and pay interests based on 0.4 basis points, where the Lloyds be the token provider and the tokens will be stored in Hedera wallet and it will be transferred to canton wallet.",
+        "action" : "Request for tokens"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Heading Page",
+  "url": "/iframe.html?args=&id=components-content-heading--default&viewMode=story",
+  "components": {
+    "Heading": {
+      "heading": ".csl-heading-s4"
+    }
+  }
+}

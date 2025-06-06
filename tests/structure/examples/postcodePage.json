@@ -1,0 +1,9 @@
+{
+  "title": "Postcode Page",
+  "url": "/iframe.html?args=&id=components-forms-postcodefield--default&viewMode=story",
+  "components": {
+    "Postcode": {
+      "postcode": ".csl-field"
+    }
+  }
+}

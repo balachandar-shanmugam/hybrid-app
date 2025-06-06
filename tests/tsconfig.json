@@ -1,0 +1,5 @@
+{
+  "extends": "@interstellar/typescript-config-wdio/dist/configs/tsconfig.json",
+  "include": ["**/*.ts"],
+  "files": ["globals.d.ts"]
+}

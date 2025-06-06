@@ -1,0 +1,9 @@
+{
+  "title": "Tabs Page",
+  "url": "/iframe.html?args=&id=components-content-tabs--default&viewMode=story",
+  "components": {
+    "Tabs": {
+      "tabs": ".csl-tabs__button-container"
+    }
+  }
+}

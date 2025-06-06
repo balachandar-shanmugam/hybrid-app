@@ -1,0 +1,9 @@
+{
+  "title": "CheckboxGroup Page",
+  "url": "/iframe.html?args=&id=components-forms-checkboxgroup--default&viewMode=story",
+  "components": {
+    "CheckboxGroup": {
+      "checkboxGroup": ".csl-field"
+    }
+  }
+}

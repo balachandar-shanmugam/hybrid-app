@@ -1,0 +1,9 @@
+{
+  "title": "RadioButtonGroup Page",
+  "url": "/iframe.html?args=&id=components-forms-radiobuttongroup--default&viewMode=story",
+  "components": {
+    "RadioButtonGroup": {
+      "radioButtonGroup": ".csl-field"
+    }
+  }
+}
