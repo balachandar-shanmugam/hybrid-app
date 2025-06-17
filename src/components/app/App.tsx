@@ -8,6 +8,8 @@ import Routes from '../../routes';
 import { getThemeFromUrl } from '../../utils/getThemeFromUrl';
 import useAppConfig from '../appConfig/useAppConfig';
 import BrandProvider, { Brand } from '../brandProvider';
+import './Styles.css'; 
+
 
 function App(): ReactElement {
   const configBrand = useAppConfig().BRAND_NAME;

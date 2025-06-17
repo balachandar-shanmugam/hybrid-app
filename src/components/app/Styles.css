@@ -1,0 +1,108 @@
+/* App Style common */
+body{
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+header{
+  padding: 1.5rem 0 0 !important;
+}
+
+.navbar {
+      display: flex;
+      align-items: center;
+      background-color: #11b67a;
+      color: white;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .navbar .home-icon {
+      margin-right: 20px;
+      font-size: 20px;
+    }
+
+    .navbar .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .navbar .menu-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .menu-item i {
+      margin-left: 5px;
+    }
+
+
+    .table-container {
+      padding: 20px;
+    }
+
+    .table-header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .filters select {
+      margin-right: 10px;
+      padding: 5px;
+      width: 150px;
+    }
+
+    .search-bar, .filters {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      width: 100px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    thead {
+      background-color: #f0f0f0;
+    }
+
+    tbody {
+      background-color: #fff;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search-bar input {
+        width: 100%;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+

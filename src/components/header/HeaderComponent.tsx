@@ -7,6 +7,8 @@ import {
   GridItem,
   pxToRem,
   useWindowSize,
+  Button,
+  Text
 } from '@constellation/core';
 import { useContent } from '@interstellar/react-app-content';
 import { NavLink } from '@interstellar/react-app-routing';
@@ -57,16 +59,23 @@ export default function HeaderComponent(): ReactElement {
                 <Logo />
               </NavLink>
             </GridItem>
-            <GridItem xs={4}>
-                <h1 >Digital Finanace</h1>
-            </GridItem>
-            <GridItem xs={3} />
+            <GridItem xs={4} />
             <GridItem xs={2}>
-              <StyledNavLinks>
-                <StyledLink to={routes.Home}>{homeLink}</StyledLink>
-                {/* <ExampleLinks /> */}
-              </StyledNavLinks>
+              <Text> COMMERCIAL SAVINGS</Text>
             </GridItem>
+            <GridItem xs={3}>
+              <span><b>Client Id:</b> dfsdf3453fg45f45f</span><br></br>
+              <span><b>Last LoggedIn:</b> 26th May</span>
+            </GridItem>
+            <GridItem xs={1}><Button>Logout</Button></GridItem>
+          </Grid>
+          <Grid>
+            <div className="navbar">
+              <div className="home-icon"><i className="fas fa-home"></i></div>
+              <div className="menu">
+                <div className="menu-item">Accounts <i className="fas fa-chevron-down"></i></div>
+              </div>
+            </div>
           </Grid>
         </Container>
       </BackgroundProvider>
