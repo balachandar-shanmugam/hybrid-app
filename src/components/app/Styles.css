@@ -4,15 +4,24 @@ body{
   font-size: 14px;
 }
 
-header{
+header {
+  color:#fff !important;
   padding: 1.5rem 0 0 !important;
 }
+
+footer {
+  background: #11b67a !important;
+}
+
+.sidebar, .home-container {
+  border-top: 2px solid #11b67a;
+}
+
 
 .navbar {
       display: flex;
       align-items: center;
       background-color: #11b67a;
-      color: white;
       padding: 10px 20px;
       flex-wrap: wrap;
     }
@@ -68,6 +77,36 @@ header{
       width: 100px;
     }
 
+    .summary-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .summary-item {
+      flex: 1 1 30%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .summary-item label {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .summary-item i {
+      margin-left: 5px;
+      color: #888;
+    }
+
+    .summary-item select {
+      margin-left: 10px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -89,6 +128,8 @@ header{
       text-align: left;
       white-space: nowrap;
     }
+
+
 
     @media (max-width: 768px) {
       .table-header {

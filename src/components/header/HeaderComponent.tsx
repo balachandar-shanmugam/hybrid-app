@@ -17,8 +17,8 @@ import { ThemeContext } from 'styled-components';
 import { HeaderContent } from './HeaderComponent.config';
 import { StyledHeader, StyledLink } from './HeaderComponent.styled';
 import StyledNavLinks from './NavLinks.styled';
-import ExampleLinks from '../../examples/exampleContent/exampleHeaderContent/exampleLinks';
 import * as routes from '../../routes/manifest';
+
 
 function Logo() {
   const theme = React.useContext(ThemeContext);
@@ -59,15 +59,17 @@ export default function HeaderComponent(): ReactElement {
                 <Logo />
               </NavLink>
             </GridItem>
-            <GridItem xs={4} />
+            <GridItem xs={5} />
             <GridItem xs={2}>
-              <Text> COMMERCIAL SAVINGS</Text>
+              <Text size="s6" color='inherit'> COMMERCIAL SAVINGS</Text>
             </GridItem>
-            <GridItem xs={3}>
+            <GridItem xs={2}>
               <span><b>Client Id:</b> dfsdf3453fg45f45f</span><br></br>
               <span><b>Last LoggedIn:</b> 26th May</span>
             </GridItem>
-            <GridItem xs={1}><Button>Logout</Button></GridItem>
+            <GridItem xs={1}>
+              <Button variation='primary' className="login" >Logout</Button>
+            </GridItem>
           </Grid>
           <Grid>
             <div className="navbar">

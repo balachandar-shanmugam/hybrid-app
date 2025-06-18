@@ -8,6 +8,9 @@ import {
   Grid,
   GridItem,
   Strong,
+  Accordion,
+  Container,
+  Table
 } from '@constellation/core';
 import { useContent } from '@interstellar/react-app-content';
 
@@ -34,10 +37,46 @@ function HomePage(): ReactElement {
 
   return (
     <Grid>
-      <GridItem xs={2} />
+      <GridItem xs={12}>
+        <Heading weight="normal" marginBottom="04">Accounts by entity</Heading>
+      </GridItem>
+      <GridItem xs={2} className='sidebar'>
+        <Accordion label='Entity'>CMP Account</Accordion>
+      </GridItem>
       <GridItem xs={10}>
+        <Container className='home-container'>
         {data && (
           <>
+           <Grid className='summary-box1'>
+            <GridItem xs={4}>
+              <div className="summary-item">
+                <label>Closing Available Balance:</label><i className="fas fa-info-circle"></i>
+                <span>£8,345.67</span>
+              </div>
+            </GridItem>
+            <GridItem xs={4}>
+              <div className="summary-item">
+                <label>Closing Booked Balance:</label><i className="fas fa-info-circle"></i>
+                <span>£1,100.00</span>
+              </div>
+            </GridItem>
+            <GridItem xs={4}>
+              <div className="summary-item">
+                <div>
+                  <label>Currency:</label>
+                  <select>
+                    <option>GBP</option>
+                    <option>EUR</option>
+                    <option>YEN</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Posting Date:</label>
+                  <span>2024-06-01</span>
+                </div>
+              </div>
+            </GridItem>
+            </Grid>
           <div className='table-container'>
             <div className="table-header">
               <div className="search-bar">
@@ -136,6 +175,7 @@ function HomePage(): ReactElement {
           </div>
           </>
         )}
+        </Container>
       </GridItem>
     </Grid>
   );
