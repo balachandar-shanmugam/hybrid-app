@@ -23,6 +23,7 @@ function HomePage(): ReactElement {
     useContent<HomePageContent>();
 
   const [data, setData] = useState(null);
+
   useEffect(() => {
     fetchHome()
       .then((res)=>{
@@ -47,23 +48,23 @@ function HomePage(): ReactElement {
         <Container className='home-container'>
         {data && (
           <>
-           <Grid className='summary-box1'>
+           <Grid className='summary-box'>
             <GridItem xs={4}>
               <div className="summary-item">
-                <label>Closing Available Balance:</label><i className="fas fa-info-circle"></i>
-                <span>£8,345.67</span>
+                <Text color="brand" size='s2'>Closing Available Balance</Text><i className="fas fa-info-circle"></i>
+                <div><Text as="p" color="subdued">£8,345.67</Text></div>
               </div>
             </GridItem>
             <GridItem xs={4}>
               <div className="summary-item">
-                <label>Closing Booked Balance:</label><i className="fas fa-info-circle"></i>
-                <span>£1,100.00</span>
+                <Text color="brand" size='s2' >Closing Booked Balance</Text><i className="fas fa-info-circle"></i>
+                <Text as="p" color="subdued">£1,100.00</Text>
               </div>
             </GridItem>
             <GridItem xs={4}>
               <div className="summary-item">
                 <div>
-                  <label>Currency:</label>
+                  <Text color="brand" size='s2'>Currency</Text>
                   <select>
                     <option>GBP</option>
                     <option>EUR</option>
@@ -71,8 +72,8 @@ function HomePage(): ReactElement {
                   </select>
                 </div>
                 <div>
-                  <label>Posting Date:</label>
-                  <span>2024-06-01</span>
+                  <Text size='s2' color="brand"> Posting Date</Text>
+                  <Text  size='s6' as="label" color="subdued"> 2024-06-01</Text>
                 </div>
               </div>
             </GridItem>
@@ -99,6 +100,7 @@ function HomePage(): ReactElement {
                 </select>
               </div>
             </div>
+                     
             <table>
               <thead>
                 <tr>
@@ -114,62 +116,22 @@ function HomePage(): ReactElement {
                 </tr>
               </thead>
               <tbody>
+                {data.accounts.map((account) => (
                 <tr>
                   <td>
                     <i className="fas fa-list"></i>
                     <i className="fas fa-cog" ></i>
                   </td>
-                  <td>12345678</td>
-                  <td>123456</td>
-                  <td>ABC Accounts - Euro</td>
-                  <td>ABC Corp</td>
-                  <td>10.00</td>
-                  <td>10.00</td>
-                  <td>10.00</td>
-                  <td>10.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    <i className="fas fa-list"></i>
-                    <i className="fas fa-cog" ></i>
-                  </td>
-                  <td>45672359</td>
-                  <td>237634</td>
-                  <td>CMP Holdings - Euro</td>
-                  <td>ABC Corp</td>
-                  <td>101.00</td>
-                  <td>101.00</td>
-                  <td>101.00</td>
-                  <td>101.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    <i className="fas fa-list"></i>
-                    <i className="fas fa-cog" ></i>
-                  </td>
-                  <td>75253187</td>
-                  <td>437426</td>
-                  <td>CMP Accounts - Yen</td>
-                  <td>ABC Corp</td>
-                  <td>56.00</td>
-                  <td>56.00</td>
-                  <td>56.00</td>
-                  <td>56.00</td>
-                </tr>                
-                <tr>
-                  <td>
-                    <i className="fas fa-list"></i>
-                    <i className="fas fa-cog" ></i>
-                  </td>
-                  <td>87654321</td>
-                  <td>654321</td>
-                  <td>CMP Account - Dollar  </td>
-                  <td>CMP</td>
-                  <td>50.00</td>
-                  <td>50.00</td>
-                  <td>50.00</td>
-                  <td>50.00</td>
-                </tr>
+                  <td>{account.acc}</td>
+                  <td>{account.sort}</td>
+                  <td>{account.acc_name}</td>
+                  <td>{account.pre_name}</td>
+                  <td>{account.avail_bal}</td>
+                  <td>{account.book_bal}</td>
+                  <td>{account.interim_bal}</td>
+                  <td>{account.interim_book_bal}</td>
+                </tr> 
+                ))}
               </tbody>
             </table>
           </div>

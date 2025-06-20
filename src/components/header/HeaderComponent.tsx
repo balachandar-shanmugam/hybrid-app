@@ -59,7 +59,7 @@ export default function HeaderComponent(): ReactElement {
                 <Logo />
               </NavLink>
             </GridItem>
-            <GridItem xs={5} />
+            <GridItem xs={4} />
             <GridItem xs={2}>
               <Text size="s6" color='inherit'> COMMERCIAL SAVINGS</Text>
             </GridItem>
@@ -67,7 +67,7 @@ export default function HeaderComponent(): ReactElement {
               <span><b>Client Id:</b> dfsdf3453fg45f45f</span><br></br>
               <span><b>Last LoggedIn:</b> 26th May</span>
             </GridItem>
-            <GridItem xs={1}>
+            <GridItem xs={2}>
               <Button variation='primary' className="login" >Logout</Button>
             </GridItem>
           </Grid>

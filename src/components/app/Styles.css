@@ -17,6 +17,10 @@ footer {
   border-top: 2px solid #11b67a;
 }
 
+.home-container {
+  background-color: #f9f9f9;
+}
+
 
 .navbar {
       display: flex;
@@ -81,14 +85,11 @@ footer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      background-color: #f9f9f9;
       padding: 20px;
       border-bottom: 1px solid #ccc;
     }
 
     .summary-item {
-      flex: 1 1 30%;
-      display: flex;
       align-items: center;
       margin-bottom: 10px;
     }
