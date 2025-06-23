@@ -68,7 +68,7 @@ export default function HeaderComponent(): ReactElement {
               <span><b>Last LoggedIn:</b> 26th May</span>
             </GridItem>
             <GridItem xs={2}>
-              <Button variation='primary' className="login" >Logout</Button>
+              <Button variation='primary' className="login-btn" >Logout</Button>
             </GridItem>
           </Grid>
           <Grid>

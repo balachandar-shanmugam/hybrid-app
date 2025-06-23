@@ -21,7 +21,12 @@ footer {
   background-color: #f9f9f9;
 }
 
-
+.login-btn{
+    background: #f9f9f9;
+    color: #000;
+    border-radius: 0;
+    width: 8em;
+}
 .navbar {
       display: flex;
       align-items: center;
