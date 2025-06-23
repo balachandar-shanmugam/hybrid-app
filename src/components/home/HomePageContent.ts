@@ -18,3 +18,8 @@ export const AccTableHead = {
                   "INTERIM_BAL" :"Interim available balance",
                   "INTERIM_BOOK_BAL" :"Interim booked balance",
 }
+
+export const SummaryTitle = {
+    TITLE_CA: "Closing Available Balance",
+    TITLE_CB: "Closing Booked Balance"
+}

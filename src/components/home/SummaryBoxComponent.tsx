@@ -7,19 +7,20 @@ import {
   Table
 } from '@constellation/core';
 
+import { SummaryTitle } from './HomePageContent';
 
 export function SummaryBoxComponent(): ReactElement {
   return (
           <Grid className='summary-box'>
             <GridItem xs={4}>
               <div className="summary-item">
-                <Text color="brand" size='s2'>Closing Available Balance</Text><i className="fas fa-info-circle"></i>
+                <Text color="brand" size='s2'>{SummaryTitle.TITLE_CA}</Text><i className="fas fa-info-circle"></i>
                 <div><Text as="p" color="subdued">£8,345.67</Text></div>
               </div>
             </GridItem>
             <GridItem xs={4}>
               <div className="summary-item">
-                <Text color="brand" size='s2' >Closing Booked Balance</Text><i className="fas fa-info-circle"></i>
+                <Text color="brand" size='s2' >{SummaryTitle.TITLE_CB}</Text><i className="fas fa-info-circle"></i>
                 <Text as="p" color="subdued">£1,100.00</Text>
               </div>
             </GridItem>

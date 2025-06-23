@@ -54,21 +54,22 @@ export default function HeaderComponent(): ReactElement {
       <BackgroundProvider value={{ cssValue: theme.header_color_background }}>
         <Container>
           <Grid alignY="center">
-            <GridItem xs={2}>
+            <GridItem xs={12} sm={6}>
               <NavLink to={routes.Home} title="logo">
                 <Logo />
               </NavLink>
             </GridItem>
-            <GridItem xs={4} />
-            <GridItem xs={2}>
+            <GridItem sm={2}>
               <Text size="s6" color='inherit'> COMMERCIAL SAVINGS</Text>
             </GridItem>
-            <GridItem xs={2}>
+            <GridItem sm={2}>
               <span><b>Client Id:</b> dfsdf3453fg45f45f</span><br></br>
               <span><b>Last LoggedIn:</b> 26th May</span>
             </GridItem>
-            <GridItem xs={2}>
-              <Button variation='primary' className="login-btn" >Logout</Button>
+            <GridItem sm={2}>
+              <Button variation='primary' className="login-btn"> 
+                <i class="fa-sharp fa-solid fa-lock"></i> Logout
+              </Button>
             </GridItem>
           </Grid>
           <Grid>
