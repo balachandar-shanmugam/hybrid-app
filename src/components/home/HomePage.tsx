@@ -43,7 +43,7 @@ function HomePage(): ReactElement {
         <Heading weight="normal" marginBottom="04">Accounts by entity</Heading>
       </GridItem>
       <GridItem xs={2} className='sidebar'>
-        <Accordion label='Entity'>CMP Account</Accordion>
+        <Accordion label='Entity' variation="sidebar"><Text size="s1">CMP Account</Text></Accordion>
       </GridItem>
       <GridItem xs={10}>
         <Container className='home-container'>

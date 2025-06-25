@@ -3,18 +3,20 @@ body{
   font-family: system-ui, sans-serif;
   font-size: 14px;
 }
-
+#app .sidebar{
+  padding: 0;
+}
 header {
   color:#fff !important;
-  padding: 1.5rem 0 0 !important;
+  padding: 0.5rem 0 0 !important;
 }
 
 footer {
-  background: #11b67a !important;
+  background: #006a4d !important;
 }
 
 .sidebar, .home-container {
-  border-top: 2px solid #11b67a;
+  border-top: 4px solid #006a4d;
 }
 
 .home-container {
@@ -22,17 +24,15 @@ footer {
 }
 
 #app .login-btn{
-    background: #f9f9f9;
     color: #000;
-    border-radius: 0;
-    width: 8em;
-    padding: 6px 0;
+    padding: 4px 0;
+}
+#app .login-btn span {
+  font-size: 14px
 }
 .navbar {
       display: flex;
       align-items: center;
-      background-color: #11b67a;
-      padding: 10px 20px;
       flex-wrap: wrap;
     }
 
@@ -44,19 +44,51 @@ footer {
     .navbar .menu {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 2rem;
+      padding-left: 5px;
     }
 
     .navbar .menu-item {
       cursor: pointer;
       display: flex;
       align-items: center;
+      position: relative;
     }
 
     .navbar .menu-item i {
       margin-left: 5px;
     }
 
+    .menu-item a span {
+      color: #fff;
+      font-size:14px;
+    }
+
+    #app .menu-item a {
+      text-decoration: none;
+    }
+    .menu-item .submenu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 4px 8px;
+    background: #2D8259;
+    width: 100px;
+    top: 34px;
+    }
+
+    /* .menu li:hover {
+     color: #096e49;
+    } */
+    .menu-item.active .submenu {
+      display: block;
+    }
+
+  .hamburger {
+    font-size: xx-large;
+    float: right;
+    cursor: pointer;
+}
 
     .table-container {
       padding: 20px;

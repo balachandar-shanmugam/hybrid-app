@@ -8,17 +8,18 @@ import {
   pxToRem,
   useWindowSize,
   Button,
-  Text
+  Text,
+  Link,
+  Paragraph,
+  IconPhone
 } from '@constellation/core';
 import { useContent } from '@interstellar/react-app-content';
 import { NavLink } from '@interstellar/react-app-routing';
 import { ThemeContext } from 'styled-components';
-
+import { menuData } from './HeaderComponentContent'
 import { HeaderContent } from './HeaderComponent.config';
 import { StyledHeader, StyledLink } from './HeaderComponent.styled';
-import StyledNavLinks from './NavLinks.styled';
 import * as routes from '../../routes/manifest';
-
 
 function Logo() {
   const theme = React.useContext(ThemeContext);
@@ -45,6 +46,11 @@ function Logo() {
   return null;
 }
 
+function toggleDropdown(element) {
+  element.classList.toggle('active');
+
+}
+
 export default function HeaderComponent(): ReactElement {
   const theme = React.useContext(ThemeContext);
   const { homeLink } = useContent<HeaderContent>();
@@ -52,33 +58,53 @@ export default function HeaderComponent(): ReactElement {
   return (
     <StyledHeader>
       <BackgroundProvider value={{ cssValue: theme.header_color_background }}>
-        <Container>
+        <Container width='fluid'>
           <Grid alignY="center">
-            <GridItem xs={12} sm={6}>
+            <GridItem xs={12} sm={7}>
               <NavLink to={routes.Home} title="logo">
                 <Logo />
               </NavLink>
             </GridItem>
-            <GridItem sm={2}>
-              <Text size="s6" color='inherit'> COMMERCIAL SAVINGS</Text>
+            <GridItem xs={6} sm={2}>
+              <Text size="s1" style={{fontSize: "small", paddingRight:"14px"}}> COMMERCIAL BANKING </Text>
+              <Text> <i className="fas">|</i>   <IconPhone iconSize='md' />  <i className="fas">|</i> </Text>
+
             </GridItem>
-            <GridItem sm={2}>
-              <span><b>Client Id:</b> dfsdf3453fg45f45f</span><br></br>
-              <span><b>Last LoggedIn:</b> 26th May</span>
+            <GridItem xs={6} sm={2}>
+              <Paragraph marginBottom="none" size='s1' style={{fontSize: "small"}}>Client Id: 6002324545</Paragraph>
+              <Paragraph marginBottom="none" size='s1' style={{fontSize: "small"}}>Last LoggedIn: 26th May, 2025</Paragraph>
             </GridItem>
-            <GridItem sm={2}>
+            <GridItem xs={12} sm={1}>
               <Button variation='primary' className="login-btn"> 
-                <i class="fa-sharp fa-solid fa-lock"></i> Logout
+                <i className="fa-sharp fa-solid fa-lock"></i> Logout
               </Button>
             </GridItem>
           </Grid>
           <Grid>
+            <GridItem sm={11}>
             <div className="navbar">
               <div className="home-icon"><i className="fas fa-home"></i></div>
-              <div className="menu">
-                <div className="menu-item">Accounts <i className="fas fa-chevron-down"></i></div>
-              </div>
+              <ul className="menu">
+              {menuData && menuData.map((menuItem, index) => (
+                <li className="menu-item" key={index} onClick={(event) => toggleDropdown(event.currentTarget)} >
+                  <StyledLink to={menuItem.link}> {menuItem.name}  <i className="fas fa-chevron-down"></i></StyledLink>
+                  {menuItem.subMenu && (
+                    <ul className='submenu'>
+                      {menuItem.subMenu.map((subItem, subIndex) => (
+                        <li key={subIndex} className="submenu-item">
+                          <StyledLink to={subItem.link}>{subItem.name}</StyledLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+             </ul>
             </div>
+              </GridItem>
+              <GridItem sm={1}>
+              <div className="hamburger" id="hamburger">&#9776;</div>
+              </GridItem>
           </Grid>
         </Container>
       </BackgroundProvider>

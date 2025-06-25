@@ -49,7 +49,7 @@ const getTheme = (brand: Brand): DefaultTheme => {
     }
     case Brand.LLOYDS:
     default: {
-      return LloydsTheme;
+      return Lloyds2023Theme;
     }
   }
 };
