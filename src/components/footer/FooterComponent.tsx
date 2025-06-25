@@ -7,6 +7,9 @@ import dataQaIds from '../../examples/dataModel/dataQaIds';
 export default function FooterComponent(): ReactElement {
   return (
     <Footer className="mvp-footer" width="fluid" marginTop="03" >
+      <FooterItem style={{marginRight: "auto"}}>
+        <Link href="#"> Last Updated:02 Jun, 2025, 10.41</Link>
+      </FooterItem>
       <FooterItem>
         <Link href="#"> Cookie Policy </Link>
       </FooterItem>

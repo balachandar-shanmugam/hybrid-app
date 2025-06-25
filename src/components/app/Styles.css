@@ -21,7 +21,7 @@ footer {
 }
 
 .sidebar, .home-container {
-  border-top: 4px solid #006a4d;
+  border-top: 3px solid #006a4d;
 }
 
 .home-container {
@@ -65,8 +65,11 @@ footer {
     }
 
     footer a span {
- 
       font-size:1rem;
+    }
+
+    #app footer>div>div {
+      flex-direction: column;
     }
 
     .menu-item .submenu {
