@@ -9,7 +9,6 @@ import {
   useWindowSize,
   Button,
   Text,
-  Link,
   Paragraph,
   IconPhone
 } from '@constellation/core';

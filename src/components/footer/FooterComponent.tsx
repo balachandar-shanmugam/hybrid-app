@@ -1,17 +1,27 @@
 import React, { ReactElement } from 'react';
 
-import { FooterItem, Paragraph, Footer } from '@constellation/core';
+import { FooterItem, Text, Footer, Link} from '@constellation/core';
 
 import dataQaIds from '../../examples/dataModel/dataQaIds';
 
 export default function FooterComponent(): ReactElement {
   return (
-    <Footer marginTop="03" data-qa-id={dataQaIds.footer.container}>
+    <Footer className="mvp-footer" width="fluid" marginTop="03" >
       <FooterItem>
-        <Paragraph marginBottom="06" marginTop="06">
-          {}{' '}
-        </Paragraph>
+        <Link href="#"> Cookie Policy </Link>
       </FooterItem>
+      <FooterItem>
+        <Link href="#"> Commercial banking </Link>
+      </FooterItem>
+      <FooterItem>
+        <Link href="#"> Security </Link>
+      </FooterItem>
+      <FooterItem>
+        <Link href="#"> Legal </Link>
+      </FooterItem>
+      <FooterItem>
+        <Link href="#"> Privacy </Link>
+      </FooterItem> 
     </Footer>
   );
 }
