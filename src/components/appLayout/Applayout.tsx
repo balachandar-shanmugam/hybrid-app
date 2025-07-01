@@ -16,7 +16,7 @@ function AppLayout({ children }: LayoutProps): React.JSX.Element {
   return (
     <Page>
       {!webview && <Header data-qa-id={dataQaIds.header.container} />}
-      <Main>{children}</Main>
+      <Main width="fluid">{children}</Main>
       {!webview && <Footer />}
     </Page>
   );

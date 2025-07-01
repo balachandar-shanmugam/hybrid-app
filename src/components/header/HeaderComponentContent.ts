@@ -7,7 +7,7 @@ export const menuData = [
   { name: "Reports",  link: "found"  },
   { name: "Digital Assets", 
       subMenu: [
-        {name:"Holdings", link:"add-fund"},
+        {name:"Trade", link:"trade"},
         {name:"Transfer", link:"transfer-fund"},
       ]
   }

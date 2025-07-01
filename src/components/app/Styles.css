@@ -9,6 +9,7 @@ body{
 header {
   color:#fff !important;
   padding: 0.5rem 0 0 !important;
+  margin-bottom: 0 !important;
 }
 
 footer {
@@ -65,7 +66,7 @@ footer {
     }
 
     footer a span {
-      font-size:1rem;
+      font-size:12px
     }
 
     #app footer>div>div {
@@ -80,6 +81,7 @@ footer {
     background: #2D8259;
     width: 100px;
     top: 34px;
+    z-index: 1000;
     }
 
     /* .menu li:hover {
@@ -191,3 +193,104 @@ footer {
       }
     }
 
+
+
+
+  /* trade */
+  #app .trade-container{
+  .trade-search-box {
+    position: relative;
+    input {
+      border-radius: 10px;
+      border-color: #ccc;
+      padding-left: 1.5rem;
+    }
+  }
+
+  .rounded-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9f9f9;
+    }
+
+    .rounded-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  .fa-search{
+    position: absolute;
+    top: 30px;
+    left: 6px;
+  }
+
+  
+  
+  .filter-nav span {
+    font-size: 12px
+  }
+      
+  .filter-nav button {
+        margin-right: 10px;
+        padding: 7px;
+        border-radius: 14px;
+        border: 1px solid #ccc;
+  }
+
+  .summary-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+  }
+
+  .ellipsis {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .list:last-child  {
+    border: none
+  }
+  .info-label{
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+  }
+  .fs12{
+    font-size:12px;
+  }
+
+  table {
+    border: 0.0625rem solid #ccc;
+  }
+  table tr:first-child{
+    background-color: #efefef;
+
+  }
+  tr:not(:last-child) td {
+        border-bottom: 0.0625rem solid #ccc;
+    }
+  td:not(:last-child) {
+    border-right: none;
+  } 
+
+}
+
+
+    

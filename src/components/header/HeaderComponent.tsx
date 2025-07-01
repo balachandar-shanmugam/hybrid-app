@@ -57,7 +57,7 @@ export default function HeaderComponent(): ReactElement {
   return (
     <StyledHeader>
       <BackgroundProvider value={{ cssValue: theme.header_color_background }}>
-        <Container width='fluid'>
+        <Container width='fluid' style={{ padding: "0 8px"}}>
           <Grid alignY="center">
             <GridItem xs={12} sm={7}>
               <NavLink to={routes.Home} title="logo">
@@ -79,7 +79,7 @@ export default function HeaderComponent(): ReactElement {
               </Button>
             </GridItem>
           </Grid>
-          <Grid>
+          <Grid style={{ background: "#118363"}}>
             <GridItem sm={11}>
             <div className="navbar">
               <div className="home-icon"><i className="fas fa-home"></i></div>

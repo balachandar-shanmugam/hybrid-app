@@ -10,6 +10,7 @@ import useAppConfig from '../components/appConfig/useAppConfig';
 import content from '../content';
 import ExampleRoutes from '../examples/exampleRoutes';
 import { getThemeFromUrl } from '../utils/getThemeFromUrl';
+import TradePage from 'components/trade/TradePage';
 
 function App(): ReactElement {
   const brandConfig = useAppConfig().BRAND_NAME;
@@ -22,6 +23,14 @@ function App(): ReactElement {
         element={
           <ContentProvider value={content({ brand }).homepage}>
             <HomePage />
+          </ContentProvider>
+        }
+      />
+      <Route
+        path={routes.Trade}
+        element={
+          <ContentProvider value={content({ brand }).tradepage}>
+            <TradePage />
           </ContentProvider>
         }
       />
