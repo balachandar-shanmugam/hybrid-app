@@ -9,7 +9,7 @@ import {
   TableCol
 } from '@constellation/core';
 
-import { AccTableHead, TableHeader } from './TradePageContent';
+import { Funds, TableHeader } from './TradePageContent';
 
 export function TableBoxComponent({data}): ReactElement {
   return (
@@ -20,22 +20,20 @@ export function TableBoxComponent({data}): ReactElement {
                     <TableCol className='table-header'>{tableHead}</TableCol>
                   ))}
               </TableRow>
-                {data && data.accounts.map((account) => (
+                {Funds && Funds.map((fund) => (
                 <TableRow>
                   <TableCol>
                     <div className="rounded-icon">
                      <img src="../assets/common/axe.png" alt="logo"/>
                     </div>
-                    <Text as="span"> Company Names </Text>
+                    <Text as="span">{fund.name} </Text>
                   </TableCol>
-                  <TableCol>{account.acc}</TableCol>
-                  <TableCol>{account.sort}</TableCol>
-                  <TableCol>{account.acc_name}</TableCol>
-                  <TableCol>{account.pre_name}</TableCol>
-                  <TableCol>{account.avail_bal}</TableCol>
-                  <TableCol>{account.book_bal}</TableCol>
-                  <TableCol>{account.interim_bal}</TableCol>
-                  <TableCol>{account.interim_book_bal}</TableCol>
+                  <TableCol>{fund.type}</TableCol>
+                  <TableCol>{fund.currency}</TableCol>
+                  <TableCol>{fund.indicativePL}</TableCol>
+                  <TableCol>{fund.best_bid}</TableCol>
+                  <TableCol>{fund.best_ask}</TableCol>
+                  <TableCol>{fund.avail_bal}</TableCol>
                 </TableRow> 
                 ))}
 

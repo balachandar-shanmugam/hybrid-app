@@ -285,6 +285,7 @@ footer {
   }
   tr:not(:last-child) td {
         border-bottom: 0.0625rem solid #ccc;
+        width: 100%;
     }
   td:not(:last-child) {
     border-right: none;

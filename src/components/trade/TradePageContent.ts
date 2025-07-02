@@ -1,10 +1,5 @@
 import { Content } from '@interstellar/react-app-content';
 
-export interface HomePageContent extends Content {
-  coreFeaturesDesc?: string;
-  heroComponentContent?: HeroComponentProps[];
-}
-
 export const AccTableHead = {
                   "ACTION" :"Action",
                   "ACC_NO" :"Account number",
@@ -17,10 +12,17 @@ export const AccTableHead = {
                   "INTERIM_BOOK_BAL" :"Interim booked balance",
 }
 
-export const TableHeader = ["Name","Type", "Currency", "Indicative P&L", "Best Bid", "Best Ask", "Available Balance","Interim Bal", "Closing Balance"];
+export const TableHeader = ["Name","Type", "Currency", "Indicative P&L", "Best Bid", "Best Ask", "Available Balance"];
 
+export const Funds = [
+                { "name": "Black Rock ICS Sterling Fund", "type": "MMT", "currency": "GBP", "indicativePL": "-","best_bid":"£1","best_ask":"-","avail_bal":"9000" },
+                { "name": "Black Rock ICS Sterling Fund", "type": "MMT", "currency": "GBP", "indicativePL": "-","best_bid":"£1","best_ask":"-","avail_bal":"9,976,556" },
+                { "name": "Black Rock ICS Sterling Fund", "type": "MMT", "currency": "GBP", "indicativePL": "-","best_bid":"£1","best_ask":"-","avail_bal":"10.00" },
+                { "name": "Black Rock ICS Sterling Fund", "type": "MMT", "currency": "GBP", "indicativePL": "-","best_bid":"£1","best_ask":"-","avail_bal":"10.00" },
+                { "name": "Black Rock ICS Sterling Fund", "type": "MMT", "currency": "GBP", "indicativePL": "-","best_bid":"£1","best_ask":"-","avail_bal":"10.00" },
+                { "name": "Black Rock ICS Sterling Fund", "type": "MMT", "currency": "GBP", "indicativePL": "-","best_bid":"£1","best_ask":"-","avail_bal":"10.00" }
 
+             ];
 export const SummaryTitle = {
     TITLE_CA: "Black Rock ICS Sterling Government Liquidity fund",
-    TITLE_CB: "Closing Booked Balance"
 }
