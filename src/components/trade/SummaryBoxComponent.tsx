@@ -16,15 +16,16 @@ import { BackgroundProvider } from './TradePage.styled';
 
 export function SummaryBoxComponent(): ReactElement {
   return (
-          <Grid className='trade-summary-box'>
+          <Grid>
             <GridItem xs={12}>
-              <SummaryBox title={SummaryTitle.TITLE_CA} variation="secondary">
+              <SummaryBox className='trade-summary-box' title={SummaryTitle.TITLE_CA} variation="secondary">
                 <div style={{display:"flex",justifyContent:"space-between"}}>
                   <Text className="ellipsis" as="p" size="s1"><Strong>{SummaryTitle.TITLE_CA}</Strong> </Text>
                   <Text as="label" className="info-label"> MMT </Text>
                   <i style={{float:"right"}} className="fas fa-qrcode"></i>
                 </div>
                 <Text className="fs12">Archax</Text>
+                <Text className="fs12" marginLeft="05">ISN: EOV673DBID67</Text>
               </SummaryBox>
 
             </GridItem>

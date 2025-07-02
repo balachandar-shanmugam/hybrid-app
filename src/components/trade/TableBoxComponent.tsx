@@ -2,8 +2,6 @@ import React, { ReactElement } from 'react';
 
 import {
   Text,
-  Grid,
-  GridItem,
   Table,
   TableRow,
   TableCol
@@ -11,7 +9,7 @@ import {
 
 import { Funds, TableHeader } from './TradePageContent';
 
-export function TableBoxComponent({data}): ReactElement {
+export function TableBoxComponent(): ReactElement {
   return (
           <div className='table-box-container'>
             <Table>
@@ -24,9 +22,10 @@ export function TableBoxComponent({data}): ReactElement {
                 <TableRow>
                   <TableCol>
                     <div className="rounded-icon">
-                     <img src="../assets/common/axe.png" alt="logo"/>
+                     <img src="./assets/axe.png" alt="logo"/>
                     </div>
-                    <Text as="span">{fund.name} </Text>
+                    <Text as="span" marginLeft="03" marginRight='05' className='ellipsis'>{fund.name} </Text>
+                    <Text as="span" className="fs12">{fund.ISN} </Text>
                   </TableCol>
                   <TableCol>{fund.type}</TableCol>
                   <TableCol>{fund.currency}</TableCol>
@@ -42,36 +41,3 @@ export function TableBoxComponent({data}): ReactElement {
           </div>
   );
 }
-
-
-/*
-
-            <table>
-              <thead>
-                <tr>
-                  {TableHeader && TableHeader.map((tableHead) => (
-                    <th>{tableHead}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {data && data.accounts.map((account) => (
-                <tr>
-                  <td>
-                    <i className="fas fa-list"></i>
-                    <i className="fas fa-cog" ></i>
-                  </td>
-                  <td>{account.acc}</td>
-                  <td>{account.sort}</td>
-                  <td>{account.acc_name}</td>
-                  <td>{account.pre_name}</td>
-                  <td>{account.avail_bal}</td>
-                  <td>{account.book_bal}</td>
-                  <td>{account.interim_bal}</td>
-                  <td>{account.interim_book_bal}</td>
-                </tr> 
-                ))}
-              </tbody>
-            </table>
-
-            */

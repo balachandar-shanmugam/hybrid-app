@@ -255,6 +255,7 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: inline-block;
   }
   .list {
     display: flex;
@@ -290,6 +291,10 @@ footer {
   td:not(:last-child) {
     border-right: none;
   } 
+
+  .trade-summary-box>div {
+    background-color: #303030;
+  }
 
 }
 

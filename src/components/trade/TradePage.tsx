@@ -1,44 +1,18 @@
 import React, { ReactElement,useEffect, useState } from 'react';
 
 import {
-  Heading,
-  Paragraph,
-  Text,
   Button,
   Grid,
   GridItem,
-  Strong,
-  Accordion,
-  Container,
-  Table,
-  IconSearch,
   TextField,
   ContentGroup
 } from '@constellation/core';
-import { useContent } from '@interstellar/react-app-content';
 import { TableBoxComponent } from './TableBoxComponent';
 import { SummaryBoxComponent } from './SummaryBoxComponent';
-import { HomePageContent } from './TradePageContent';
-import {fetchHome} from '../../services/homeApi'
+import { Buttons } from './TradePageContent';
 
 
 function TradePage(): ReactElement {
-
-
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetchHome()
-      .then((res)=>{
-
-        setData(res);
-        console.log('response success:', res);
-      })
-      .catch((error)=>console.log('response failed:', error))
-    },[]
-  );
-
-
   return (
     <>
       <Grid className="trade-container">
@@ -48,19 +22,15 @@ function TradePage(): ReactElement {
                <i className="fas fa-search"></i><TextField name="search" label={''} marginBottom="05" /> 
           </div> 
           <div className='filter-nav'>
-            <Button  variation="secondary">All(5)</Button>
-            <Button variation="secondary">Primary Sale(8)</Button>
-            <Button variation="secondary">Secondary Sale(5)</Button>
-            <Button variation="secondary" disabled>Redeemable sale</Button>
-            <Button  variation="secondary">MMF(2)</Button>
+            <Button  variation="secondary">{Buttons.ALL}(5)</Button>
+            <Button variation="secondary">{Buttons.PRIMARY}(8)</Button>
+            <Button variation="secondary">{Buttons.SECONDARY}(5)</Button>
+            <Button variation="secondary" disabled>{Buttons.REDEEMABLE}(2)</Button>
+            <Button  variation="secondary">{Buttons.MMF}(2)</Button>
 
           </div>
           </ContentGroup>
-          {data && (
-            <>
-              <TableBoxComponent data={data}/>
-            </>
-          )}
+          <TableBoxComponent/>
         </GridItem>
         <GridItem xs={3}>
           <SummaryBoxComponent />
