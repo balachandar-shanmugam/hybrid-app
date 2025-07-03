@@ -12,32 +12,34 @@ import {
   } from '@constellation/core';
 
 import { SummaryTitle } from './TradePageContent';
-import { BackgroundProvider } from './TradePage.styled';
 
-export function SummaryBoxComponent(): ReactElement {
+
+export function SummaryBoxComponent({data}): ReactElement {
+
   return (
           <Grid>
             <GridItem xs={12}>
-              <SummaryBox className='trade-summary-box' title={SummaryTitle.TITLE_CA} variation="secondary">
+              <SummaryBox className='trade-summary-box' title={!data ? SummaryTitle.TITLE_CA : data.name} variation="secondary">
                 <div style={{display:"flex",justifyContent:"space-between"}}>
-                  <Text className="ellipsis" as="p" size="s1"><Strong>{SummaryTitle.TITLE_CA}</Strong> </Text>
+                  <Text className="ellipsis" as="p" size="s1"><Strong>{!data ? SummaryTitle.TITLE_CA : data.name}</Strong> </Text>
                   <Text as="label" className="info-label"> MMT </Text>
                   <i style={{float:"right"}} className="fas fa-qrcode"></i>
                 </div>
                 <Text className="fs12">Archax</Text>
-                <Text className="fs12" marginLeft="05">ISN: EOV673DBID67</Text>
+                <Text className="fs12" marginLeft="05">{!data ? 'ISN: EOV673DBID67' : data.ISN}</Text>
               </SummaryBox>
 
             </GridItem>
             <GridItem xs={12}>
               <Box className="summary-item">
                   <Text  size='s2'><Strong>Balance</Strong></Text><i className="fas fa-info-circle"></i>
-                  <Box bgColor="information"  marginTop="03" style={{    borderRadius: '5%'}}>
+                  <Box bgColor="information"  marginTop="03" marginBottom="02"
+                    style={{borderRadius: '10', padding: '14px'}}>
                     <Text as="p">
                       <Strong> Available Balance</Strong> 
                       <Text marginLeft="04" className="fs12">Last update: 15-04-25</Text>
                     </Text>
-                    <Text size='s3'><Strong>£9000</Strong></Text>
+                    <Text size='s3'><Strong>£ {data ? data.avail_bal : "9000"}</Strong></Text>
                   </Box>
                   <div className="list">
                     <Text as="span">Last Buy Price</Text>
@@ -49,7 +51,7 @@ export function SummaryBoxComponent(): ReactElement {
                   </div>
               </Box>
               <Box className="summary-item">
-                <ContentGroup>
+                <ContentGroup marginBottom="02">
                   <Text size='s2' ><Strong>Trading</Strong></Text>
                   
                   <div className="list">
@@ -73,5 +75,6 @@ export function SummaryBoxComponent(): ReactElement {
 
             </GridItem>
           </Grid>
+
   );
 }
