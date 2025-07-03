@@ -204,7 +204,7 @@ footer {
     input {
       border-radius: 10px;
       border-color: #ccc;
-      padding-left: 1.5rem;
+      padding-left: 2rem;
     }
   }
 
@@ -308,7 +308,7 @@ footer {
     background-color: aliceblue;
   }
   .fa-search {
-    padding-left: 3px;
+    padding-left: 4px;
   }
 
 }

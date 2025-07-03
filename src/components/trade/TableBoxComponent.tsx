@@ -6,7 +6,6 @@ import {
   TableRow,
   TableCol
 } from '@constellation/core';
-
 import { Funds, TableHeader } from './TradePageContent';
 
 export function TableBoxComponent({onFundClick}): ReactElement {
@@ -34,20 +33,20 @@ const handleClick = (fund, index) => {
                   onClick={() => handleClick(fund, index)} >
                   <TableCol>
                     <div className="rounded-icon">
-                     <img src="./assets/axe.png" alt="logo"/>
+                     <img src={fund.icon} alt="logo"/>
                     </div>
-                    <Text as="span" marginLeft="03" marginRight='05' 
+                    <Text size="s1" as="span" marginLeft="03" marginRight='05' 
                       className="ellipsis">
                         {fund.name} 
                     </Text>
                     <Text as="span" className="fs12">{fund.ISN} </Text>
                   </TableCol>
-                  <TableCol>{fund.type}</TableCol>
-                  <TableCol>{fund.currency}</TableCol>
-                  <TableCol>{fund.indicativePL}</TableCol>
-                  <TableCol>{fund.best_bid}</TableCol>
-                  <TableCol>{fund.best_ask}</TableCol>
-                  <TableCol>{fund.avail_bal}</TableCol>
+                  <TableCol><Text size="s1">{fund.type}</Text></TableCol>
+                  <TableCol><Text size="s1">{fund.currency}</Text></TableCol>
+                  <TableCol><Text size="s1">{fund.indicativePL}</Text></TableCol>
+                  <TableCol><Text size="s1">{fund.best_bid}</Text></TableCol>
+                  <TableCol><Text size="s1">{fund.best_ask}</Text></TableCol>
+                  <TableCol><Text size="s1">{fund.avail_bal}</Text></TableCol>
                 </TableRow> 
                 ))}
 

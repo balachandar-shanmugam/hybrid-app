@@ -19,10 +19,10 @@ export function SummaryBoxComponent({data}): ReactElement {
   return (
           <Grid>
             <GridItem xs={12}>
-              <SummaryBox className='trade-summary-box' title={!data ? SummaryTitle.TITLE_CA : data.name} variation="secondary">
+              <SummaryBox marginBottom="05" className='trade-summary-box' title={!data ? SummaryTitle.TITLE_CA : data.name} variation="secondary">
                 <div style={{display:"flex",justifyContent:"space-between"}}>
                   <Text className="ellipsis" as="p" size="s1"><Strong>{!data ? SummaryTitle.TITLE_CA : data.name}</Strong> </Text>
-                  <Text as="label" className="info-label"> MMT </Text>
+                  <Text as="label" className="info-label"> {!data ? 'MMT' : data.type} </Text>
                   <i style={{float:"right"}} className="fas fa-qrcode"></i>
                 </div>
                 <Text className="fs12">Archax</Text>
@@ -34,10 +34,15 @@ export function SummaryBoxComponent({data}): ReactElement {
               <Box className="summary-item">
                   <Text  size='s2'><Strong>Balance</Strong></Text><i className="fas fa-info-circle"></i>
                   <Box bgColor="information"  marginTop="03" marginBottom="02"
-                    style={{borderRadius: '10', padding: '14px'}}>
+                    style={{borderRadius: '10px', padding: '14px',paddingRight: "0"}}>
                     <Text as="p">
-                      <Strong> Available Balance</Strong> 
-                      <Text marginLeft="04" className="fs12">Last update: 15-04-25</Text>
+                      <Text marginRight="04"> <Strong>Available Balance</Strong></Text> 
+                      <Text className="fs12" style={{display:"inline-flex"}}>
+                        Last update: 15-04-25
+                        <i style={{paddingLeft: "2px"}} className="fa-solid fa-rotate"></i>
+                     </Text>
+                      
+
                     </Text>
                     <Text size='s3'><Strong>£ {data ? data.avail_bal : "9000"}</Strong></Text>
                   </Box>
@@ -67,7 +72,7 @@ export function SummaryBoxComponent({data}): ReactElement {
                     <Text><Strong>£1</Strong></Text>
                   </div>
                 </ContentGroup>
-                <div className="button-group" style={{display:"flex",justifyContent:"space-between"}}> 
+                <div className="button-group" style={{display:"flex",justifyContent:"space-between", margin: "14px 0"}}> 
                   <Button variation="secondary">Redeem</Button>
                   <Button >Invest</Button>
                 </div>
