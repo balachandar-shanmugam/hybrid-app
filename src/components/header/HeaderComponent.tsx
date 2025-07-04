@@ -59,10 +59,13 @@ export default function HeaderComponent(): ReactElement {
       <BackgroundProvider value={{ cssValue: theme.header_color_background }}>
         <Container width='fluid' style={{ padding: "0 8px"}}>
           <Grid alignY="center">
-            <GridItem xs={12} sm={7}>
+            <GridItem xs={10} sm={5}>
               <NavLink to={routes.Home} title="logo">
                 <Logo />
               </NavLink>
+            </GridItem>
+            <GridItem xs={2} sm={2}>
+              <Text size="s1" style={{fontSize: "small"}} >GEM</Text>
             </GridItem>
             <GridItem xs={6} sm={2}>
               <Text size="s1" style={{fontSize: "small", paddingRight:"14px"}}> COMMERCIAL BANKING </Text>
