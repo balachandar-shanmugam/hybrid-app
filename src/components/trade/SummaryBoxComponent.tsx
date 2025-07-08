@@ -19,15 +19,30 @@ export function SummaryBoxComponent({data}): ReactElement {
   return (
           <Grid>
             <GridItem xs={12}>
-              <SummaryBox marginBottom="05" className='trade-summary-box' title={!data ? SummaryTitle.TITLE_CA : data.name} variation="secondary">
-                <div style={{display:"flex",justifyContent:"space-between"}}>
-                  <Text className="ellipsis" as="p" size="s1"><Strong>{!data ? SummaryTitle.TITLE_CA : data.name}</Strong> </Text>
-                  <Text as="label" className="info-label"> {!data ? 'MMT' : data.type} </Text>
-                  <i style={{float:"right"}} className="fas fa-qrcode"></i>
+              <SummaryBox marginBottom="0" className='trade-summary-box' title={!data ? SummaryTitle.TITLE_CA : data.name} 
+              variation="primary">
+                <div className="summary-logo rounded-icon">
+                  <img src={data?data.icon : "#"} alt="logo"/>
                 </div>
-                <Text className="fs12">Archax</Text>
-                <Text className="fs12" marginLeft="05">{!data ? 'ISN: EOV673DBID67' : data.ISN}</Text>
+                <Text as="label" marginLeft="08" style={{backgroundColor:"#303030"}} color="inherit" className="fs12">
+                  {!data ? 'ISN: EOV673DBID67' : `ISN: ${data.ISN}`}
+                </Text>
+
               </SummaryBox>
+              <div className="summary-title">
+                <Grid>
+                  <GridItem xs={12}>
+                <Text  as="p" size="s1">
+                  <Strong className="ellipsis">{!data ? SummaryTitle.TITLE_CA : data.name}</Strong>  
+                        <Text as="label" className="info-label"> {!data ? 'MMT' : data.type} </Text>
+                </Text>
+                  </GridItem>
+                  <GridItem xs={12}>
+                    <Text className="fs12">Archax</Text>
+                  </GridItem>
+                </Grid>
+                  <i style={{float:"right"}} className="fas fa-qrcode"></i>
+              </div>
 
             </GridItem>
             <GridItem xs={12}>

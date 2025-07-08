@@ -220,6 +220,14 @@ footer {
       background-color: #f9f9f9;
     }
 
+  .summary-logo {
+    position: absolute;
+    bottom: 77px;
+        width: 50px;
+        height: 50px;
+        left: 32px;
+  }
+
     .rounded-icon img {
       width: 100%;
       height: 100%;
@@ -243,6 +251,14 @@ footer {
         padding: 7px;
         border-radius: 14px;
         border: 1px solid #ccc;
+  }
+
+  .summary-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
   }
 
   .summary-item {
@@ -274,6 +290,7 @@ footer {
     padding: 5px;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 10px;
+    vertical-align: text-top;
   }
   .fs12{
     font-size:12px;
@@ -294,7 +311,7 @@ footer {
     border-right: none;
   } 
 
-  .trade-summary-box>div {
+  .trade-summary-box>div, .csl-summary-box__body {
     background-color: #303030;
   }
   .table-row {
