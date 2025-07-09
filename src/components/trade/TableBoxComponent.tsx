@@ -6,9 +6,10 @@ import {
   TableRow,
   TableCol
 } from '@constellation/core';
-import { Funds, TableHeader } from './TradePageContent';
+import { TableHeader } from './TradePageContent';
+import { TableData } from './Trade.config';
 
-export function TableBoxComponent({onFundClick}): ReactElement {
+export function TableBoxComponent({Funds, onFundClick}:TableData): ReactElement {
 
 
 const [selectedIndex, setSelectedIndex] = useState(null);
