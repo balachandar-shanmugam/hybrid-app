@@ -9,7 +9,7 @@ import {
 import { TableHeader } from './TradePageContent';
 import { TableData } from './Trade.config';
 
-export function TableBoxComponent({Funds, onFundClick}:TableData): ReactElement {
+export function TableBoxComponent({Funds, onFundClick}): ReactElement {
 
 
 const [selectedIndex, setSelectedIndex] = useState(null);
