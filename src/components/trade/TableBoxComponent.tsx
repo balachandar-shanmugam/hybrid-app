@@ -8,16 +8,27 @@ import {
 } from '@constellation/core';
 import { TableHeader } from './TradePageContent';
 import { TableData } from './Trade.config';
+import Pagination from 'components/pagination/Pagination';
+
+
+const rowsPerPage = 6;
 
 export function TableBoxComponent({Funds, onFundClick}): ReactElement {
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const totalPages = Math.ceil(Funds.length / rowsPerPage);
 
-const [selectedIndex, setSelectedIndex] = useState(null);
 
-const handleClick = (fund, index) => {
-    setSelectedIndex(index);
-    onFundClick(fund);
-  }
+  const handleClick = (fund, index) => {
+      setSelectedIndex(index);
+      onFundClick(fund);
+    }
+
+  const loadFunds = Funds.slice(
+    (currentPage - 1) * rowsPerPage,
+    currentPage * rowsPerPage
+  );
 
   return (
           <div className='table-box-container'>
@@ -27,7 +38,7 @@ const handleClick = (fund, index) => {
                     <TableCol className='table-header'>{tableHead}</TableCol>
                   ))}
               </TableRow>
-                {Funds && Funds.map((fund, index) => (
+                {loadFunds && loadFunds.map((fund, index) => (
                 <TableRow 
                   key={index} 
                   className={`table-row ${selectedIndex === index ? 'selected' : ''}`}
@@ -52,7 +63,7 @@ const handleClick = (fund, index) => {
                 ))}
 
             </Table>
-            
+            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
           </div>
   );
 }

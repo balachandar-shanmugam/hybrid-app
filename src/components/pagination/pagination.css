@@ -1,0 +1,14 @@
+.pagination-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+#pagination .active {
+  background-color: #2178b0;
+  color: white;
+  border-color: #2178b0;
+}
+
+
