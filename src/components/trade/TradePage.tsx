@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useState, ReactHTMLElement, useMemo } from 'react';
 
 import {
   Button,
@@ -15,7 +15,7 @@ import { Funds } from './TradePageContent';
 
 function TradePage(): ReactElement {
 
-
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedFund, setSelectedFund] = useState(null);
   const [filteredData, setFilteredData] = useState([]);
   
@@ -23,7 +23,18 @@ function TradePage(): ReactElement {
     setSelectedFund(data);
   };
 
-    const handleFilter = (filterType: string) => {
+  const searchSuggestions = Funds.filter(fund =>
+    fund.name.toLowerCase().includes(searchQuery.toLowerCase()) && searchQuery !== ''
+  );
+
+  const searchedData = useMemo(() => {
+    if (selectedFund) {
+      return Funds.filter(d => d.name.toLowerCase().includes(selectedFund.toLowerCase()));
+    }
+    return Funds;
+  }, [Funds, selectedFund]);
+
+  const handleFilter = (filterType: string, name?: string) => {
     switch (filterType) {
       case 'MMF':
         setFilteredData(Funds.filter(item => item.type === 'MMF'));
@@ -60,7 +71,20 @@ function TradePage(): ReactElement {
         <GridItem xs={selectedFund ? 9 : 12}>
           <ContentGroup marginBottom="03">
           <div className="trade-search-box">
-               <i className="fas fa-search"></i><TextField name="search" placeholder="Search" label={''} marginBottom="05" /> 
+               <i className="fas fa-search"></i>
+               <TextField name="search" marginBottom="05"
+                     placeholder="Search" 
+                     label={''} 
+                     value={searchQuery} 
+                     onChange={e => { setSearchQuery(e.currentTarget.value); setSelectedFund(''); }}
+               /> 
+
+               {searchSuggestions &&
+                <ul>
+                  {searchSuggestions.map((funds)=>( <li onClick={()=>setSelectedFund(funds)}>{funds.name}</li>))}
+                 
+                </ul>
+                }
           </div> 
           <div className='filter-nav'>
             <Button  variation="secondary" onClick={() => handleFilter('All')}>{Buttons.ALL}({counts.all})</Button>
@@ -71,6 +95,10 @@ function TradePage(): ReactElement {
 
           </div>
           </ContentGroup>
+          { searchedData &&
+          <TableBoxComponent Funds={searchedData } onFundClick={handleFundClick}/>
+
+          }
           <TableBoxComponent Funds={(filteredData.length >=1) ? filteredData : Funds } onFundClick={handleFundClick}/>
         </GridItem>
         <GridItem xs={3} style={{display: selectedFund ? "block" :"none"}}>
